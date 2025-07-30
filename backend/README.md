@@ -47,7 +47,6 @@ Response when exceeded:
 
 ```bash
 {
-  "status": 429,
   "message": "Too many requests. Please try again later."
 }
 ```
