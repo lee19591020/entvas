@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 Entvas NodeJS + Typescript API with mongoDB
 
 A full-stack Node.js + TypeScript application with Docker Compose, MongoDB for data storage, and a rate-limited public API.
 
