@@ -39,7 +39,6 @@ yarn start -> start production
 
 ## 📡 Public API
 This project exposes a secure API endpoint with a rate limit of 30 requests per minute per IP.
-⚠️ There is no authentication; use caution in production environments.
 
 ## 🔐 Rate Limiting
 Limit: 30 requests/minute per IP
