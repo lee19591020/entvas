@@ -17,7 +17,7 @@ This is a **Next.js** application built using **TypeScript**, with support for b
 ## 🛠️ Getting Started
 
 ### 1. Clone the repo
-
+```bash
 git clone https://github.com/lee19591020/entvas.git
 cd frontend
 
@@ -35,11 +35,11 @@ yarn build
 yarn start
 
 ## Testing
-
+```
 Add your test framework like Vitest, Jest, or Testing Library, then run:
-
+```bash
 yarn test
-
+```
 ## Environment Variables
 
 .env.local is included on this repo
