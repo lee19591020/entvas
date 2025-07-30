@@ -1,0 +1,53 @@
+"use client";
+
+
+import { Box } from "@mui/material";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import { PropsWithChildren, useState } from "react";
+import { theme } from "@/theme";
+
+import SideNavigation from "../components/navigation";
+import { SubHeader } from "../components/generics/sub-header";
+import { Header } from "../components/generics/header";
+
+
+
+export default function RootLayout(props: PropsWithChildren) {
+  const { children } = props;
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const drawerWidth = 240;
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+  return (
+    <html lang="en">
+      <head>
+        <title>Register a new admin</title>
+      </head>
+      <body>
+        <AppRouterCacheProvider>
+           <ThemeProvider theme={theme}>
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              <Header onMenuClick={handleDrawerToggle} />
+              <SideNavigation mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
+              <SubHeader breadCrumb={['Register a new admin']} />
+              <Box
+                component="main"
+                sx={{
+                  flexGrow: 1,
+                  p: 3,
+                  ml: { sm: `${drawerWidth}px` },
+                  width: { sm: `calc(97% - ${drawerWidth}px)` },
+                  transition: "margin 0.3s ease-out",
+                }}
+              >
+                {children}
+              </Box>
+            </Box>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
+    </html>
+  );
+}

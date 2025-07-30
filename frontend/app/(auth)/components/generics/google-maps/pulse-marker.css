@@ -1,0 +1,82 @@
+.custom-pulse-marker {
+  width: 12px;
+  height: 12px;
+  background: #4285F4; /* blue */
+  border-radius: 50%;
+  position: relative;
+  animation: pulse 2s infinite ease-out;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Blue hover */
+.custom-pulse-marker:hover {
+  animation: pulse-hover 1s infinite ease-out;
+  transform: scale(1.2);
+  background: #3367d6; /* darker blue */
+}
+
+/* Red alert mode */
+.custom-pulse-marker--alert {
+  background: #E53935; /* red */
+  animation: pulse-alert 1s infinite ease-out;
+}
+
+/* Red alert hover */
+.custom-pulse-marker--alert:hover {
+  animation: pulse-alert-hover 0.6s infinite ease-out;
+  background: #c62828; /* darker red */
+  transform: scale(1.2);
+}
+
+/* Blue pulse */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.4);
+  }
+  75% {
+    box-shadow: 0 0 0 10px rgba(66, 133, 244, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(66, 133, 244, 0);
+  }
+}
+
+/* Blue pulse on hover */
+@keyframes pulse-hover {
+  0% {
+    box-shadow: 0 0 0 0 rgba(51, 103, 214, 0.6);
+  }
+  75% {
+    box-shadow: 0 0 0 14px rgba(51, 103, 214, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(51, 103, 214, 0);
+  }
+}
+
+/* Red pulse */
+@keyframes pulse-alert {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.5);
+  }
+  75% {
+    box-shadow: 0 0 0 10px rgba(229, 57, 53, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0);
+  }
+}
+
+/* Red pulse on hover */
+@keyframes pulse-alert-hover {
+  0% {
+    box-shadow: 0 0 0 0 rgba(198, 40, 40, 0.6);
+  }
+  75% {
+    box-shadow: 0 0 0 14px rgba(198, 40, 40, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(198, 40, 40, 0);
+  }
+}
