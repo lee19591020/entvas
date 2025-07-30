@@ -16,26 +16,26 @@ A Node.js + TypeScript application with Docker support for both backend and fron
 ```bash
 git clone https://github.com/lee19591020/entvas.git
 cd entvas
-
+```
 ## Build and Run the Containers
-
+```
 docker-compose up --build
 
 Build and start the backend (Node.js)
 
 Build and start the frontend (Next.js or React)
-
+```
 ### Expose ports:
-
+```
 Backend → http://localhost:8008
 
 Frontend → http://localhost:3000
-
+```
 Access the App
 Frontend: http://localhost:3000
 
 Backend API: http://localhost:8008
-
+```
 entvas/
 │
 ├── backend/
@@ -50,7 +50,7 @@ entvas/
 │
 ├── docker-compose.yml
 └── README.md
-
+```
 ## Database
 
 This project is using mongoDB database
@@ -72,7 +72,7 @@ Security
     Rate Limited: Max 30 requests/minute/IP
 
     No authentication/token is currently required
-
+```
 POST /api/location
 
 {
@@ -98,10 +98,11 @@ curl -X POST http://localhost:8008/api/location \
       "name": "John Doe"
     }
   }'
-
+```
 ### Rate Limit Response
-
+```
 {
   "status": false,
   "message": "Too many requests. Please try again later."
 }
+```
