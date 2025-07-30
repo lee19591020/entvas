@@ -106,3 +106,5 @@ curl -X POST http://localhost:8008/api/location \
   "message": "Too many requests. Please try again later."
 }
 ```
+## Additional information
+The frontend will display a map, and when you sent a coordinates; it will display on the map as a blue dot with the name in it when hovered. All updates are in real time.
